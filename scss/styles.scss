@@ -1,0 +1,234 @@
+@import './colors.scss';
+
+*{
+    // border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+    h1, h2, h3, h4, h5, p, a{
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: $aqua;
+    transition: all 0.5s;
+
+    a{
+        margin: 0 30px 0 30px;
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+        border-width: 0 0 2px 0;
+        border-style: solid;
+        border-color: rgba($color: white, $alpha: 0.0);
+        transition: all 0.5s;
+    }
+
+    a:hover{
+        border-color: rgba($color: white, $alpha: 1.0);
+        color: white;
+    }
+
+
+}
+
+.transparent-nav{
+    height: 60px;
+    background-color: rgba($color: black, $alpha: 0.4);
+}
+
+.transparent-nav-link{
+    color: rgba($color: white, $alpha: 0.5);
+}
+
+header {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    section {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .title {
+        background-color: $lightGray;
+    }
+
+    .titleImage-container {
+        background-color: $lightCreme;
+    }
+
+    .titleImage{
+        height: 75%;
+        box-shadow: 5px 5px 5px gray;
+    }
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    .review {
+        width: 80%;
+        max-width: 1200px;
+        min-height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+
+        p{
+            margin-bottom: 15px;
+        }
+
+        div {
+            margin-top: 20px;
+            p {
+                margin-top: 5px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .presentation {
+        width: 80%;
+        max-width: 1200px;
+        min-height: 100vh;
+    }
+
+    .contents{
+        width: 80%;
+        max-width: 1200px;
+        min-height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+
+        div{
+            margin-top: 20px;
+        }
+    }
+
+    .bio {
+        width: 80%;
+        max-width: 1200px;
+        min-height: 100vh;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+
+            .author-picture{
+                height: 40vw;
+                max-width: 100%;
+                margin-bottom: 20px;
+                overflow: hidden;
+                background-image: url("../assets/mainpic.jpeg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        }
+
+        .bio-description {
+            padding: 0 20px 0 20px !important;
+
+            p{
+                margin-top: 10px;
+            }
+        }
+
+    }
+
+}
+
+footer {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+
+    div{
+        width: 80%;
+        height: 50%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social a{
+            text-decoration: none;
+        }
+    }
+}
+
+.copyright {
+    width: 100vw;
+    height: 10%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+
+    p{
+        font-weight: lighter;
+        margin: 0;
+    }
+
+    a{
+        color: white;
+    }
+
+    a:hover{
+        span{
+            color: aquamarine;
+            transition: all 0.5s;
+        }
+    }
+}
