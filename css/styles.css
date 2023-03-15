@@ -4,6 +4,10 @@
   scroll-behavior: smooth; }
   * h1, * h2, * h3, * h4, * h5, * p, * a {
     font-family: 'Source Sans Pro', sans-serif; }
+  * p, * a {
+    font-size: 130%;
+    font-weight: lighter;
+    text-decoration: none; }
 
 nav {
   height: 80px;
@@ -14,13 +18,14 @@ nav {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  background-color: #5B9B94;
+  background-color: rgba(0, 0, 0, 0.4);
   transition: all 0.5s; }
   nav a {
     margin: 0 30px 0 30px;
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
+    font-weight: bolder;
     border-width: 0 0 2px 0;
     border-style: solid;
     border-color: rgba(255, 255, 255, 0);
@@ -31,10 +36,10 @@ nav {
 
 .transparent-nav {
   height: 60px;
-  background-color: rgba(0, 0, 0, 0.4); }
+  background-color: rgba(67, 133, 192, 0.8); }
 
 .transparent-nav-link {
-  color: rgba(255, 255, 255, 0.5); }
+  color: rgba(255, 255, 255, 0.8); }
 
 header {
   width: 100vw;
@@ -51,12 +56,30 @@ header {
     justify-content: center;
     align-items: center; }
   header .title {
-    background-color: #B8B8B8; }
+    background-color: white;
+    padding: 0 40px; }
+    header .title a:visited {
+      color: #4385C0; }
+    header .title h1 {
+      font-size: 200%;
+      transition: all 0.5s;
+      cursor: pointer; }
+    header .title h1:hover {
+      color: #252525; }
+    header .title p {
+      font-size: 150%; }
   header .titleImage-container {
-    background-color: #B1B1A6; }
-  header .titleImage {
-    height: 75%;
-    box-shadow: 5px 5px 5px gray; }
+    background-color: #4385C0;
+    transition: all 0.5s;
+    cursor: pointer; }
+    header .titleImage-container .titleImage {
+      height: auto;
+      max-height: 720px;
+      width: 75%;
+      max-width: 490px;
+      transition: all 0.5s; }
+  header .titleImage-container:hover {
+    background-color: rgba(67, 133, 192, 0.8); }
 
 main {
   width: 100%;
@@ -65,20 +88,27 @@ main {
   justify-content: center;
   align-items: center; }
   main .review {
-    width: 80%;
-    max-width: 1200px;
+    width: 100vw;
+    height: 100vh;
     min-height: 100vh;
     display: flex;
-    flex-flow: column nowrap;
     justify-content: center;
-    align-items: flex-start; }
-    main .review p {
-      margin-bottom: 15px; }
+    align-items: center;
+    background-color: rgba(67, 133, 192, 0.8); }
     main .review div {
-      margin-top: 20px; }
+      width: 80%;
+      max-width: 1200px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: flex-start; }
       main .review div p {
-        margin-top: 5px;
-        margin-bottom: 0; }
+        margin-bottom: 15px; }
+      main .review div div {
+        margin-top: 20px; }
+        main .review div div p {
+          margin-top: 5px;
+          margin-bottom: 0; }
   main .presentation {
     width: 80%;
     max-width: 1200px;
@@ -91,71 +121,101 @@ main {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: flex-start; }
+    main .contents h2 {
+      font-weight: lighter;
+      align-self: center; }
     main .contents div {
       margin-top: 20px; }
   main .bio {
-    width: 80%;
-    max-width: 1200px;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex-flow: row nowrap;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    background-color: rgba(67, 133, 192, 0.8); }
     main .bio div {
-      min-height: 100vh;
-      width: 100%;
+      height: 100%;
+      width: 80%;
+      max-width: 1200px;
       display: flex;
-      flex-flow: column nowrap;
+      flex-flow: row nowrap;
       justify-content: center;
       align-items: center; }
+      main .bio div div {
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center; }
+      main .bio div .bio-description {
+        padding: 0 20px 0 20px !important; }
+        main .bio div .bio-description p {
+          margin-top: 10px; }
       main .bio div .author-picture {
-        height: 40vw;
+        height: 50vw;
         max-width: 100%;
-        margin-bottom: 20px;
         overflow: hidden;
         background-image: url("../assets/mainpic.jpeg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover; }
-    main .bio .bio-description {
-      padding: 0 20px 0 20px !important; }
-      main .bio .bio-description p {
-        margin-top: 10px; }
 
 footer {
   width: 100vw;
-  height: 100vh;
-  min-height: 100vh;
+  height: 45vh;
+  padding-top: 50px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  background-color: pink; }
+  background-color: #4385C0; }
   footer div {
     width: 80%;
     height: 50%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    align-items: center; }
+    align-items: flex-start; }
     footer div div {
       height: 100%;
       width: 100%;
+      margin-top: 50px;
       display: flex;
       flex-flow: column nowrap;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center; }
+      footer div div a, footer div div p {
+        margin: 5px 0;
+        color: #252525;
+        transition: all 0.5s; }
+      footer div div a:hover, footer div div p:hover {
+        color: white; }
+      footer div div h3 {
+        color: #252525; }
+      footer div div a i {
+        color: white;
+        margin-right: 5px; }
     footer div .social a {
       text-decoration: none; }
+  footer .purchase {
+    align-items: center;
+    color: #252525; }
+    footer .purchase h2 a {
+      color: white;
+      transition: all 0.5s; }
+    footer .purchase h2 a:visited {
+      color: white; }
+    footer .purchase h2 a:hover {
+      color: #252525; }
 
 .copyright {
   width: 100vw;
-  height: 10%;
+  height: 100px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: #252525;
   color: white;
   font-size: 12px; }
   .copyright p {

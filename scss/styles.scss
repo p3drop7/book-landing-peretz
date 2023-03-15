@@ -8,6 +8,13 @@
 
     h1, h2, h3, h4, h5, p, a{
         font-family: 'Source Sans Pro', sans-serif;
+        // font-family: "Merriweather Sans", sans-serif;
+    }
+
+    p, a{
+        font-size: 130%;
+        font-weight: lighter;
+        text-decoration: none;
     }
 }
 
@@ -20,7 +27,7 @@ nav {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    background-color: $aqua;
+    background-color: rgba($color: black, $alpha: 0.4);
     transition: all 0.5s;
 
     a{
@@ -28,6 +35,7 @@ nav {
         text-decoration: none;
         color: white;
         font-size: 1.5rem;
+        font-weight: bolder;
         border-width: 0 0 2px 0;
         border-style: solid;
         border-color: rgba($color: white, $alpha: 0.0);
@@ -44,11 +52,11 @@ nav {
 
 .transparent-nav{
     height: 60px;
-    background-color: rgba($color: black, $alpha: 0.4);
+    background-color: $mainBlue-transparent;
 }
 
 .transparent-nav-link{
-    color: rgba($color: white, $alpha: 0.5);
+    color: rgba($color: white, $alpha: 0.8);
 }
 
 header {
@@ -69,17 +77,48 @@ header {
     }
     
     .title {
-        background-color: $lightGray;
+        background-color: white;
+        padding: 0 40px;
+
+        a:visited{
+            color: $mainBlue;
+        }
+
+        h1{
+            font-size: 200%;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        h1:hover{
+            color: $mainBlack;
+        }
+
+        p{
+            font-size: 150%;
+        }
     }
 
     .titleImage-container {
-        background-color: $lightCreme;
+        background-color: $mainBlue;
+        transition: all 0.5s;
+        cursor: pointer;
+
+        .titleImage{
+            height: auto;
+            max-height: 720px;
+            width: 75%;
+            max-width: 490px;
+            transition: all 0.5s;
+            // box-shadow: 5px 5px 10px rgb(149, 149, 149);
+        }  
+        
+    }
+    
+    .titleImage-container:hover {
+        background-color: $mainBlue-transparent;
     }
 
-    .titleImage{
-        height: 75%;
-        box-shadow: 5px 5px 5px gray;
-    }
 }
 
 main {
@@ -90,23 +129,33 @@ main {
     align-items: center;
 
     .review {
-        width: 80%;
-        max-width: 1200px;
+        width: 100vw;
+        height: 100vh;
         min-height: 100vh;
         display: flex;
-        flex-flow: column nowrap;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
+        background-color: $mainBlue-transparent;
 
-        p{
-            margin-bottom: 15px;
-        }
+        div{
+            width: 80%;
+            max-width: 1200px;
 
-        div {
-            margin-top: 20px;
-            p {
-                margin-top: 5px;
-                margin-bottom: 0;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: flex-start;
+
+            p{
+                margin-bottom: 15px;
+            }
+    
+            div {
+                margin-top: 20px;
+                p {
+                    margin-top: 5px;
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -125,6 +174,11 @@ main {
         flex-flow: column nowrap;
         justify-content: center;
         align-items: flex-start;
+        
+        h2{
+            font-weight: lighter;
+            align-self: center;
+        }
 
         div{
             margin-top: 20px;
@@ -132,26 +186,40 @@ main {
     }
 
     .bio {
-        width: 80%;
-        max-width: 1200px;
-        min-height: 100vh;
+        width: 100vw;
+        height: 100vh;
         display: flex;
-        flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
-
+        background-color: $mainBlue-transparent;
+        
         div {
-            min-height: 100vh;
-            width: 100%;
+            height: 100%;
+            width: 80%;
+            max-width: 1200px;
             display: flex;
-            flex-flow: column nowrap;
+            flex-flow: row nowrap;
             justify-content: center;
             align-items: center;
 
+            div{
+                height: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .bio-description {
+                padding: 0 20px 0 20px !important;
+                p{
+                    margin-top: 10px;
+                }
+            }
+            
             .author-picture{
-                height: 40vw;
+                height: 50vw;
                 max-width: 100%;
-                margin-bottom: 20px;
                 overflow: hidden;
                 background-image: url("../assets/mainpic.jpeg");
                 background-repeat: no-repeat;
@@ -159,60 +227,88 @@ main {
                 background-size: cover;
             }
         }
-
-        .bio-description {
-            padding: 0 20px 0 20px !important;
-
-            p{
-                margin-top: 10px;
-            }
-        }
-
     }
-
 }
 
 footer {
     width: 100vw;
-    height: 100vh;
-    min-height: 100vh;
+    height: 45vh;
+    padding-top: 50px;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    background-color: pink;
-
+    background-color: $mainBlue;
+    
     div{
         width: 80%;
         height: 50%;
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
-        align-items: center;
-
+        align-items: flex-start;
+        
         div {
             height: 100%;
             width: 100%;
+            margin-top: 50px;
             display: flex;
             flex-flow: column nowrap;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
+
+            a, p{
+                margin: 5px 0;
+                color: $mainBlack;
+                transition: all 0.5s;
+            }
+
+            a:hover, p:hover{
+                color: white;
+            }
+
+            h3 {
+                color: $mainBlack;
+            }
+
+            a i{
+                color: white;
+                margin-right: 5px;
+            }
         }
 
         .social a{
             text-decoration: none;
         }
     }
+
+    .purchase{
+        align-items: center;
+        color: $mainBlack;
+        
+        h2 a {
+            color: white;
+            transition: all 0.5s;
+        }
+
+        h2 a:visited{
+            color: white;
+        }
+
+        h2 a:hover{
+            color: $mainBlack;
+        }
+    }
 }
 
 .copyright {
     width: 100vw;
-    height: 10%;
+    height: 100px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: $mainBlack;
     color: white;
     font-size: 12px;
 
