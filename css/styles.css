@@ -6,11 +6,12 @@
     font-family: 'Source Sans Pro', sans-serif; }
   * p, * a {
     font-weight: 300;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 120%; }
 
 nav {
   height: 80px;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   display: flex;
@@ -20,10 +21,10 @@ nav {
   background-color: rgba(0, 0, 0, 0.4);
   transition: all 0.5s; }
   nav a {
-    margin: 0 30px 0 30px;
+    margin: 0 2% 0 2%;
     text-decoration: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bolder;
     border-width: 0 0 2px 0;
     border-style: solid;
@@ -41,7 +42,8 @@ nav {
   color: rgba(255, 255, 255, 0.8); }
 
 header {
-  width: 100vw;
+  width: 100%;
+  min-width: 100vw !important;
   max-width: 100vw;
   height: auto;
   min-height: 100vh;
@@ -118,17 +120,58 @@ main {
     max-width: 1200px;
     height: auto;
     min-height: 100vh;
-    padding: 50px 0;
+    padding: 100px 0;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    align-items: flex-start;
-    background-color: pink; }
+    align-items: flex-start; }
     main .contents h2 {
       font-weight: lighter;
-      align-self: center; }
-    main .contents div {
-      margin-top: 20px; }
+      align-self: center;
+      margin-bottom: 30px; }
+    main .contents .chapter-grid-container {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-content: center;
+      justify-content: center;
+      gap: 30px; }
+      main .contents .chapter-grid-container div:nth-child(10) {
+        grid-column: 4 / 1; }
+      main .contents .chapter-grid-container div {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center; }
+        main .contents .chapter-grid-container div h3 {
+          text-align: center;
+          margin-top: 10px; }
+      main .contents .chapter-grid-container .img-drop {
+        height: 20vw;
+        width: 20vw;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain; }
+      main .contents .chapter-grid-container #drop-1 {
+        background-image: url("../assets/chapters/cap1.jpeg"); }
+      main .contents .chapter-grid-container #drop-2 {
+        background-image: url("../assets/chapters/cap2.jpeg"); }
+      main .contents .chapter-grid-container #drop-3 {
+        background-image: url("../assets/chapters/cap3.jpeg"); }
+      main .contents .chapter-grid-container #drop-4 {
+        background-image: url("../assets/chapters/cap4.jpeg"); }
+      main .contents .chapter-grid-container #drop-5 {
+        background-image: url("../assets/chapters/cap5.jpeg"); }
+      main .contents .chapter-grid-container #drop-6 {
+        background-image: url("../assets/chapters/cap6.jpeg"); }
+      main .contents .chapter-grid-container #drop-7 {
+        background-image: url("../assets/chapters/cap7.jpeg"); }
+      main .contents .chapter-grid-container #drop-8 {
+        background-image: url("../assets/chapters/cap8.jpeg"); }
+      main .contents .chapter-grid-container #drop-9 {
+        background-image: url("../assets/chapters/cap9.jpeg"); }
+      main .contents .chapter-grid-container #drop-10 {
+        background-image: url("../assets/chapters/cap10.jpeg"); }
   main .bio {
     width: 100vw;
     height: auto;
@@ -158,6 +201,13 @@ main {
           margin-top: 10px; }
         main .bio div .bio-description span {
           font-weight: bold; }
+        main .bio div .bio-description a {
+          font-size: 100%;
+          color: black;
+          font-weight: bolder;
+          transition: all 0.5s ease; }
+        main .bio div .bio-description a:hover {
+          color: white; }
       main .bio div .author-picture {
         height: 50vw;
         max-width: 100%;
@@ -166,6 +216,29 @@ main {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover; }
+      main .bio div .background-hover {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        cursor: default;
+        background-color: rgba(0, 0, 0, 0);
+        transition: all 0.5s ease; }
+        main .bio div .background-hover a {
+          margin: 10px; }
+          main .bio div .background-hover a i {
+            color: rgba(255, 255, 255, 0);
+            font-size: 40px;
+            transition: height 0.5s ease, width 0.5s ease; }
+          main .bio div .background-hover a i:hover {
+            height: 120%;
+            width: 120%; }
+      main .bio div .background-hover:hover {
+        background-color: rgba(0, 0, 0, 0.6); }
+        main .bio div .background-hover:hover a i {
+          color: white; }
 
 footer {
   width: 100vw;
