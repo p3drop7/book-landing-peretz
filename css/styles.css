@@ -9,6 +9,12 @@
     text-decoration: none;
     font-size: 120%; }
 
+.nav-display-button {
+  display: none; }
+
+.nav-close-button {
+  display: none; }
+
 nav {
   height: 80px;
   width: 100vw;
@@ -38,7 +44,7 @@ nav {
 
 .transparent-nav {
   height: 60px;
-  background-color: rgba(67, 133, 192, 0.8); }
+  background-color: rgba(0, 0, 0, 0.6); }
 
 .transparent-nav-link {
   color: rgba(255, 255, 255, 0.8); }
@@ -50,6 +56,7 @@ header {
   height: auto;
   min-height: 100vh;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center; }
   header section {
     height: inherit;
@@ -103,7 +110,8 @@ main {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  overflow: hidden; }
   main .review {
     width: 100vw;
     height: auto;
@@ -222,7 +230,7 @@ main {
         justify-content: center;
         align-items: center; }
       main .bio div .bio-description {
-        padding: 0 20px 0 20px !important; }
+        padding: 0 20px 0 20px; }
         main .bio div .bio-description p {
           margin-top: 10px; }
         main .bio div .bio-description span {
@@ -335,3 +343,100 @@ footer {
   .copyright a:hover span {
     color: aquamarine;
     transition: all 0.5s; }
+
+@media (max-width: 550px) {
+  .nav-display-button {
+    height: 0px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    top: 50px;
+    z-index: 10; }
+  .nav-display-button div {
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    background-color: #4385C0;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center; }
+  .nav-display-button div i {
+    font-size: 230%;
+    color: white; }
+  nav {
+    height: 100vh !important;
+    width: 100% !important;
+    padding: 50px 100000px 0 0;
+    position: fixed;
+    left: 100%;
+    z-index: 1000;
+    background-color: rgba(37, 37, 37, 0.8);
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    overflow: hidden; }
+  nav a {
+    font-size: 1.8rem;
+    margin: 18px 0px; }
+  nav .nav-close-button {
+    color: white;
+    font-size: 2.3rem;
+    display: inline-block;
+    position: relative; }
+  .nav-visible {
+    left: -10%; }
+  header {
+    margin: 0;
+    height: 100vh;
+    max-height: 100vh;
+    flex-flow: column-reverse; }
+    header section {
+      width: 100%;
+      max-width: 100vw;
+      overflow: hidden;
+      padding: 0 !important;
+      margin: 0; }
+    header section.title {
+      height: 35%; }
+      header section.title div {
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center; }
+        header section.title div a, header section.title div p {
+          text-align: center;
+          align-self: center; }
+        header section.title div br {
+          display: none; }
+        header section.title div .purchaseButton {
+          height: 30px; }
+    header section.titleImage-container {
+      height: 65% !important; }
+      header section.titleImage-container img {
+        height: 80% !important;
+        max-height: 80% !important;
+        width: auto !important; }
+  main .review div {
+    width: 90%; }
+    main .review div p {
+      font-size: 1.1rem; }
+  main .contents {
+    padding: 50px 0; }
+    main .contents .chapter-grid-container {
+      grid-template-columns: 1fr 1fr; }
+      main .contents .chapter-grid-container div:nth-child(10) {
+        grid-column: auto; }
+  main .bio div {
+    width: 90%;
+    flex-flow: column-reverse nowrap; }
+    main .bio div .bio-description {
+      padding: 0; }
+    main .bio div .author-picture {
+      margin: 20px 0; }
+  main .footer {
+    min-height: 50vh; } }

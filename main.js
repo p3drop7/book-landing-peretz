@@ -3,6 +3,9 @@ AOS.init();
 // NAV BAR
 const navbar = document.querySelector('nav');
 const navbarLink = document.querySelectorAll('nav a')
+const navExpandButton = document.querySelector('#nav-display-button')
+const navCloseButton = document.querySelector('#nav-close-button')
+
 
 window.addEventListener('scroll', () => {
     if(screen.width > 769){
@@ -22,4 +25,18 @@ window.addEventListener('scroll', () => {
             });
         }
     }
+});
+
+navExpandButton.addEventListener('click', ()=>{
+    navbar.classList.add('nav-visible')
+})
+
+navCloseButton.addEventListener('click', ()=> {
+    navbar.classList.remove('nav-visible')
+})
+
+navbarLink.forEach(item => {
+    item.addEventListener('click', ()=>{
+        navbar.classList.remove('nav-visible')
+    })
 });
