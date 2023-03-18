@@ -78,20 +78,6 @@ header {
       color: #252525; }
     header .title p {
       font-size: 150%; }
-    header .title div.purchaseButton {
-      width: 80px;
-      padding: 8px;
-      text-align: center;
-      background-color: rgba(67, 133, 192, 0.8);
-      border-radius: 10px;
-      box-shadow: 2px 2px 5px gray;
-      transition: background-color 0.5s ease;
-      cursor: pointer; }
-      header .title div.purchaseButton a {
-        color: white;
-        font-size: 1.4rem; }
-    header .title div.purchaseButton:hover {
-      background-color: #4385C0; }
   header .titleImage-container {
     background-color: #4385C0;
     transition: all 0.5s;
@@ -123,11 +109,11 @@ main {
     align-items: center;
     overflow: hidden;
     background-color: rgba(67, 133, 192, 0.8); }
-    main .review .davidStar {
-      position: absolute;
+    main .review .harpImage {
+      position: absolute !important;
       z-index: 1;
-      top: -10%;
-      left: -10%; }
+      bottom: 3%;
+      right: -100px; }
     main .review div {
       width: 80%;
       max-width: 1200px;
@@ -324,6 +310,14 @@ footer {
       color: white; }
     footer div.purchase h2 a:hover {
       color: #252525; }
+    footer div.purchase div {
+      margin-top: 10px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center; }
+      footer div.purchase div p {
+        font-size: 0.9rem; }
 
 .copyright {
   width: 100vw;
@@ -413,8 +407,6 @@ footer {
           align-self: center; }
         header section.title div br {
           display: none; }
-        header section.title div .purchaseButton {
-          height: 30px; }
     header section.titleImage-container {
       height: 65% !important; }
       header section.titleImage-container img {
@@ -425,9 +417,9 @@ footer {
     width: 90%; }
     main .review div p {
       font-size: 1.1rem; }
-  main .review .davidStar {
-    top: 2%;
-    left: 15%; }
+  main .review .harpImage {
+    bottom: 20px;
+    left: -10px; }
   main .contents {
     padding: 50px 0; }
     main .contents .chapter-grid-container {

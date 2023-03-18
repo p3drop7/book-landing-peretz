@@ -109,25 +109,6 @@ header {
             font-size: 150%;
         }
 
-        div.purchaseButton{
-            width: 80px;
-            padding: 8px;
-            text-align: center;
-            background-color: $mainBlue-transparent;
-            border-radius: 10px;
-            box-shadow: 2px 2px 5px gray;
-            transition: background-color 0.5s ease;
-            cursor: pointer;
-            
-            a{
-                color: white;
-                font-size: 1.4rem;
-            }
-        }
-
-        div.purchaseButton:hover{
-            background-color: $mainBlue;
-        }
     }
 
     .titleImage-container {
@@ -172,11 +153,11 @@ main {
         overflow: hidden;
         background-color: $mainBlue-transparent;
         
-        .davidStar{
-            position: absolute;
+        .harpImage{
+            position: absolute !important;
             z-index: 1;
-            top: -10%;
-            left: -10%;
+            bottom: 3%;
+            right: -100px;
         }
 
         div{
@@ -467,6 +448,17 @@ footer {
         h2 a:hover{
             color: $mainBlack;
         }
+
+        div{
+            margin-top: 10px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            p{
+                font-size: 0.9rem;
+            }
+        }
     }
 }
 
@@ -589,10 +581,6 @@ footer {
                 br{
                     display: none;
                 }
-
-                .purchaseButton{
-                    height: 30px;
-                }
             }
         }
 
@@ -615,9 +603,9 @@ footer {
                 }
             }
 
-            .davidStar{
-                top: 2%;
-                left: 15%;
+            .harpImage{
+                bottom: 20px;
+                left: -10px;
             }
         }
 
