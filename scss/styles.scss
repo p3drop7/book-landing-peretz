@@ -607,10 +607,17 @@ footer {
     }
 
     main{
-        .review div{
-            width: 90%;
-            p{
-                font-size: 1.1rem;
+        .review {
+            div {
+                width: 90%;
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+
+            .davidStar{
+                top: 2%;
+                left: 15%;
             }
         }
 

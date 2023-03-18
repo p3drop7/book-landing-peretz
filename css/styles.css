@@ -425,6 +425,9 @@ footer {
     width: 90%; }
     main .review div p {
       font-size: 1.1rem; }
+  main .review .davidStar {
+    top: 2%;
+    left: 15%; }
   main .contents {
     padding: 50px 0; }
     main .contents .chapter-grid-container {
