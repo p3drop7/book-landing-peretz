@@ -7,6 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rab. Eliyahu Peretz</title>
 
+  <meta name="description" content="Libro Entro lo Profano y lo Consagrado por el Rabino Eliyahu Peretz">
+
+	<meta name="keywords" content="Libro, Book, Profano, Consagrado, Eliyahu Peretz, Rabino, Publicación, Judaísmo, Argentina, buenos aires">
+
+
   <!-- Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +28,12 @@
   <!-- Fontawesome Icons-->
   <script src="https://kit.fontawesome.com/5f4f906fbc.js" crossorigin="anonymous"></script>
 
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- AOS animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <!-- My CSS -->
   <link rel="stylesheet" href="./css/styles.css">
 
@@ -30,31 +41,37 @@
 
 <body>
   <nav>
-      <a href="#home">Inicio</a>
-      <a href="#review">Reseña</a>
-      <a href="#presentation">Presentación</a>
-      <a href="#contents">Contenidos</a>
-      <a href="#bio">Autor</a>
-      <a href="#contact">Contacto</a>
+
+    <a href="#home" class="animate__animated animate__fadeIn">Inicio</a>
+    <a href="#review" class="animate__animated animate__fadeIn">Reseña</a>
+    <a href="#presentation" class="animate__animated animate__fadeIn">Presentación</a>
+    <a href="#contents" class="animate__animated animate__fadeIn">Contenidos</a>
+    <a href="#bio" class="animate__animated animate__fadeIn">Autor</a>
+    <a href="#contact" class="animate__animated animate__fadeIn">Contacto</a>
   </nav>
 
   <header id="home">
     <section class="title">
-      <div>
+      <div class="animate__animated animate__fadeInUp">
         <a href="https://www.dunken.org/WEB2014/index.php?opt=2&id_titulo=19640" target="_blank"><h1>Entre lo profano y lo consagrado</h1></a>
         <br>
         <p>Perspectivas de ayer y de hoy sobre diez textos de la literatura judía<p>
+        <br>
+        <div class="purchaseButton">
+          <a href="https://www.dunken.org/WEB2014/index.php?opt=2&id_titulo=19640" target="_blank">Adquirir</a>
+        </div>
       </div>
     </section>
 
     <section class="titleImage-container">
-      <img src="./assets/entreloprofano.jpeg" alt="book-image" class="titleImage">
+      <img src="./assets/entreloprofano.jpeg" alt="book-image" class="titleImage animate__animated animate__fadeInUp" >
     </section>
   </header>
 
   <main>
     <section class="review" id="review">
-      <div>
+      <img class="davidStar" src="./assets/davidStar1.svg" data-aos="fade-right" data-aos-duration="1100">
+      <div data-aos="fade-right" data-aos-duration="1100">
         <p>
           Ante usted, querido lector, una variopinta selección de textos. Todos ellos fueron escogidos empleando criterios subjetivos; acompañado por ellos, podrá recorrer etapas y lugares significativos en la historia del pueblo judío.
         </p>
@@ -85,43 +102,43 @@
     <section class="contents" id="contents">
       <h2>Los textos contenidos y comentados en este tomo son los siguientes:</h2>
       <div class="chapter-grid-container">
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1100">
           <div class="img-drop" id="drop-1"></div>
           <h3>Shir haShirim del rey Shelomó</h3>
         </div>
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1100">
           <div class="img-drop" id="drop-2"></div>
           <h3>La salida de Mitzrayim según Yejezkel haTraguikan</h3>
         </div>
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1100">
           <div class="img-drop" id="drop-3"></div>
           <h3>¡Ay de vosotros durante el juicio del que desvela!, de Rabi Pinejas haKohen ben Rabi Yaakov de Kafra</h3>
         </div>
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1100">
           <div class="img-drop" id="drop-4"></div>
           <h3>Un corazón en el Oriente de  Rabí Yehudá haLevi</h3>
         </div>
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1100">
           <div class="img-drop" id="drop-5"></div>
           <h3>El jajam y el tam de Rabi Najman de Breslav</h3>
         </div>
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1100">
           <div class="img-drop" id="drop-6"></div>
           <h3>El meil, de Yoram Taharlev</h3>
         </div>
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1100">
           <div class="img-drop" id="drop-7"></div>
           <h3>El hijo que renunció al regalo de su madre, de Yair Kaspi</h3>
         </div>
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1100">
           <div class="img-drop" id="drop-8"></div>
           <h3>El silencio de Kaila Shabat</h3>
         </div>
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1100">
           <div class="img-drop" id="drop-9"></div>
           <h3>Yedid Nefesh de Beruriah Wiegand</h3>
         </div>
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1100">
           <div class="img-drop" id="drop-10"></div>
           <h3>Acerca de los verbos "desear" y "considerar", un midrash de Sandra Pien</h3>
         </div>
@@ -130,7 +147,7 @@
 
     <section class="bio" id="bio">
       <div>
-        <div class="bio-description">
+        <div class="bio-description" data-aos="fade-right" data-aos-duration="1100">
           <p>
             <a href="https://www.instagram.com/rabino_eliyahu_peretz/?next=https%3A%2F%2Fwww.instagram.com%2Feli201237%2Fp%2FBngNp6xBpW2%2F%3F__coig_login%3D1"
             target="_blank" target="_blank">Eliyahu Peretz</a> (Madrid, 1979) es rabino. Egresado en Ciencias Sociales (Sociología y Antropología) por la Universidad de Haifa, se especializó en enseñanza del Tanaj en el Seminar haKibutzim College. Tras su ordenación rabínica, estudió jazanut y música andalusí en el Centro del Piyut de Ashdod, Israel.</p>
@@ -142,7 +159,7 @@
           </p>
         </div>
         <div>
-          <div class="author-picture">
+          <div class="author-picture" data-aos="fade-left" data-aos-duration="1100">
             <div class="background-hover">
               <a href="https://www.instagram.com/rabino_eliyahu_peretz/?next=https%3A%2F%2Fwww.instagram.com%2Feli201237%2Fp%2FBngNp6xBpW2%2F%3F__coig_login%3D1"
                 target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -158,9 +175,9 @@
 
   <footer id="contact">
   
-    <div>
+    <div class="contactContainer">
       <div class="contactDetails">
-        <h3>Contato:</h3>
+        <h3>Contacto:</h3>
         <a href="mailto: eliperetzdc@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i> eliperetzdc@gmail.com</a>
         <a href="https://wa.me/972527443186" target="_blank"><i class="fa-brands fa-whatsapp"></i> +972 52-744-3186</a>
       </div>
@@ -188,6 +205,8 @@
     </div>
 
   </footer>
+  <!-- AOS animations -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- My JS -->
   <script src="./main.js"></script>

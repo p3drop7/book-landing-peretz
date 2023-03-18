@@ -1,3 +1,5 @@
+AOS.init();
+
 // NAV BAR
 const navbar = document.querySelector('nav');
 const navbarLink = document.querySelectorAll('nav a')
