@@ -260,6 +260,41 @@ main {
         background-color: rgba(0, 0, 0, 0.6); }
         main .bio div .background-hover:hover a i {
           color: white; }
+  main .acknowledgements {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 30px 0 30px 0;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    main .acknowledgements div {
+      padding-top: 20px;
+      width: 80%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center; }
+      main .acknowledgements div .acknowledgments-grid-container {
+        width: 100%;
+        height: auto;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 20px; }
+        main .acknowledgements div .acknowledgments-grid-container div {
+          width: 100%;
+          padding: 0;
+          align-items: center;
+          justify-content: center; }
+          main .acknowledgements div .acknowledgments-grid-container div p {
+            text-align: center;
+            font-size: 1rem; }
+        main .acknowledgements div .acknowledgments-grid-container div:nth-child(7) {
+          grid-column: 3 / 2; }
 
 footer {
   width: 100vw;
@@ -434,5 +469,9 @@ footer {
       padding: 0; }
     main .bio div .author-picture {
       margin: 20px 0; }
+  main .acknowledgements div div.acknowledgments-grid-container {
+    grid-template-columns: 1fr 1fr; }
+    main .acknowledgements div div.acknowledgments-grid-container div:nth-child(7) {
+      grid-column: 1 / 3; }
   main .footer {
     min-height: 50vh; } }
