@@ -92,28 +92,29 @@ header {
         padding: 0 40px;
 
         a:visited{
-            color: $mainBlue;
+            color: $brown;
         }
 
         h1{
             font-size: 200%;
             transition: all 0.5s;
             cursor: pointer;
-            color: $mainBlue;
+            color: $beige-dark;
         }
 
         h1:hover{
-            color: $mainBlack;
+            color: $aqua;
         }
 
         p{
             font-size: 150%;
+            color: $mainBlack;
         }
 
     }
 
     .titleImage-container {
-        background-color: $mainBlue;
+        background-color: $beige-light;
         transition: all 0.5s;
         cursor: default;
 
@@ -129,7 +130,7 @@ header {
     }
     
     .titleImage-container:hover {
-        background-color: $mainBlue-transparent;
+        background-color: $beige;
     }
 
 }
@@ -152,7 +153,7 @@ main {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        background-color: $mainBlue-transparent;
+        background-color: $beige-light;
         
         .harpImage{
             position: absolute !important;
@@ -175,6 +176,7 @@ main {
             p{
                 margin-bottom: 15px;
                 font-weight: 400;
+                color: $mainBlack;
             }
     
             div {
@@ -208,6 +210,7 @@ main {
             font-weight: lighter;
             align-self: center;
             margin-bottom: 30px;
+            color: $mainBlack;
         }
 
         .chapter-grid-container{
@@ -231,6 +234,7 @@ main {
                 h3{
                     text-align: center;
                     margin-top: 10px;
+                    color: $mainBlack;
                 }
             }
 
@@ -292,7 +296,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $mainBlue-transparent;
+        background-color: $beige-light;
         
         div {
             height: 100%;
@@ -315,6 +319,7 @@ main {
                 padding: 0 20px 0 20px;
                 p{
                     margin-top: 10px;
+                    color: $mainBlack;
                 }
                 span{
                     font-weight: bold;
@@ -415,6 +420,7 @@ main {
                     p{
                         text-align: center;
                         font-size: 1rem;
+                        color: $mainBlack;
                     }
                 }
 
@@ -435,7 +441,7 @@ footer {
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-    background-color: $mainBlue;
+    background-color: $beige-dark;
 
     div.contactContainer{
         height: auto;
@@ -472,7 +478,7 @@ footer {
                 }
             
                 a i {
-                    color: white;
+                    color: $mainBlack;
                     margin-right: 5px;
                 }
             }
@@ -486,6 +492,7 @@ footer {
         
         h2 a {
             color: white;
+            font-weight: 400;
             transition: all 0.5s;
         }
 
@@ -555,7 +562,7 @@ footer {
             height: 80px;
             width: 80px;
             border-radius: 50px;
-            background-color: #4385C0;
+            background-color: $beige-dark;
             display: flex;
             flex-flow: row;
             justify-content: center;
