@@ -134,10 +134,25 @@ main {
         main .review div div p {
           margin-top: 5px;
           margin-bottom: 0; }
-  main .presentation {
+  main .video-presentation-section {
+    height: auto;
     width: 80%;
+    padding: 100px 0;
     max-width: 1200px;
-    min-height: 100vh; }
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    main .video-presentation-section div {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      align-items: center; }
+      main .video-presentation-section div .video-presentation {
+        aspect-ratio: 15/9;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: none; }
   main .contents {
     width: 80%;
     max-width: 1200px;
@@ -456,13 +471,21 @@ footer {
         height: 80% !important;
         max-height: 80% !important;
         width: auto !important; }
-  main .review div {
-    width: 90%; }
-    main .review div p {
-      font-size: 1.1rem; }
-  main .review .harpImage {
-    bottom: 20px;
-    left: -10px; }
+  main .review {
+    min-height: auto;
+    padding: 150px 0; }
+    main .review div {
+      width: 90%; }
+      main .review div p {
+        font-size: 1.1rem; }
+    main .review .harpImage {
+      bottom: 20px;
+      left: -10px; }
+  main .video-presentation-section {
+    width: 100vw;
+    padding: 100px 0; }
+    main .video-presentation-section div {
+      width: 90%; }
   main .contents {
     padding: 50px 0; }
     main .contents .chapter-grid-container {

@@ -189,10 +189,29 @@ main {
         }
     }
 
-    .presentation {
+    .video-presentation-section{
+        height: auto;
         width: 80%;
+        padding: 100px 0;
         max-width: 1200px;
-        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        div{
+            width: 80%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .video-presentation{
+                aspect-ratio: 15/9;
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                border: none;
+            }
+        }
     }
 
     .contents{
@@ -651,6 +670,9 @@ footer {
 
     main{
         .review {
+            min-height: auto;
+            padding: 150px 0;
+
             div {
                 width: 90%;
                 p {
@@ -661,6 +683,15 @@ footer {
             .harpImage{
                 bottom: 20px;
                 left: -10px;
+            }
+        }
+
+        .video-presentation-section{
+            width: 100vw;
+            padding: 100px 0;
+
+            div{
+                width: 90%;
             }
         }
 
