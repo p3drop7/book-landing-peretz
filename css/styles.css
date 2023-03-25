@@ -105,18 +105,35 @@ main {
     height: auto;
     min-height: 100vh;
     padding: 50px 0;
-    display: flex;
     position: relative;
+    display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     background-color: #dfc8b3; }
+    main .review .video-presentation-container {
+      height: auto;
+      width: 80%;
+      max-width: 1200px;
+      padding: 40px 0 80px 0;
+      display: flex;
+      justify-content: center; }
+      main .review .video-presentation-container .video-presentation {
+        aspect-ratio: 16/9;
+        width: 90%;
+        position: relative;
+        z-index: 10;
+        height: auto;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 5px 5px 10px gray; }
     main .review .harpImage {
       position: absolute !important;
       z-index: 1;
       bottom: 3%;
       right: -100px; }
-    main .review div {
+    main .review .review-text {
       width: 80%;
       max-width: 1200px;
       position: relative;
@@ -125,35 +142,15 @@ main {
       flex-flow: column nowrap;
       justify-content: center;
       align-items: flex-start; }
-      main .review div p {
+      main .review .review-text p {
         margin-bottom: 15px;
         font-weight: 400;
         color: #252525; }
-      main .review div div {
+      main .review .review-text div {
         margin-top: 20px; }
-        main .review div div p {
+        main .review .review-text div p {
           margin-top: 5px;
           margin-bottom: 0; }
-  main .video-presentation-section {
-    height: auto;
-    width: 80%;
-    padding: 100px 0;
-    max-width: 1200px;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    main .video-presentation-section div {
-      width: 80%;
-      height: 100%;
-      display: flex;
-      align-items: center; }
-      main .video-presentation-section div .video-presentation {
-        aspect-ratio: 15/9;
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        border: none;
-        box-shadow: 5px 5px 10px gray; }
   main .contents {
     width: 80%;
     max-width: 1200px;
@@ -474,19 +471,17 @@ footer {
         width: auto !important; }
   main .review {
     min-height: auto;
-    padding: 150px 0; }
-    main .review div {
+    padding: 100px 0; }
+    main .review .video-presentation-container {
+      width: 100%;
+      padding: 40px 0 40px 0; }
+    main .review .review-text {
       width: 90%; }
-      main .review div p {
+      main .review .review-text p {
         font-size: 1.1rem; }
     main .review .harpImage {
       bottom: 20px;
       left: -10px; }
-  main .video-presentation-section {
-    width: 100vw;
-    padding: 100px 0; }
-    main .video-presentation-section div {
-      width: 90%; }
   main .contents {
     padding: 50px 0; }
     main .contents .chapter-grid-container {

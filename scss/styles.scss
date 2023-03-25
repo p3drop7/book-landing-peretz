@@ -148,12 +148,33 @@ main {
         height: auto;
         min-height: 100vh;
         padding: 50px 0;
-        display: flex;
         position: relative;
+        display: flex;
+        flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
         overflow: hidden;
         background-color: $beige-light;
+
+        .video-presentation-container{
+            height: auto;
+            width: 80%;
+            max-width: 1200px;
+            padding: 40px 0 80px 0;
+            display: flex;
+            justify-content: center;
+
+            .video-presentation{
+                aspect-ratio: 16/9;
+                width: 90%;
+                position: relative;
+                z-index: 10;
+                height: auto;
+                border-radius: 10px;
+                border: none;
+                box-shadow: 5px 5px 10px gray;
+            }
+        }
         
         .harpImage{
             position: absolute !important;
@@ -162,7 +183,7 @@ main {
             right: -100px;
         }
 
-        div{
+        .review-text{
             width: 80%;
             max-width: 1200px;
             position: relative;
@@ -185,33 +206,6 @@ main {
                     margin-top: 5px;
                     margin-bottom: 0;
                 }
-            }
-        }
-    }
-
-    .video-presentation-section{
-        height: auto;
-        width: 80%;
-        padding: 100px 0;
-        max-width: 1200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        div{
-            width: 80%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-
-            .video-presentation{
-                aspect-ratio: 15/9;
-                width: 100%;
-                height: auto;
-                border-radius: 10px;
-                border: none;
-
-                box-shadow: 5px 5px 10px gray;
             }
         }
     }
@@ -673,9 +667,14 @@ footer {
     main{
         .review {
             min-height: auto;
-            padding: 150px 0;
+            padding: 100px 0;
 
-            div {
+            .video-presentation-container{
+                width: 100%;
+                padding: 40px 0 40px 0;
+            }
+
+            .review-text {
                 width: 90%;
                 p {
                     font-size: 1.1rem;
@@ -685,15 +684,6 @@ footer {
             .harpImage{
                 bottom: 20px;
                 left: -10px;
-            }
-        }
-
-        .video-presentation-section{
-            width: 100vw;
-            padding: 100px 0;
-
-            div{
-                width: 90%;
             }
         }
 
