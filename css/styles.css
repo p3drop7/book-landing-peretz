@@ -152,7 +152,8 @@ main {
         width: 100%;
         height: auto;
         border-radius: 10px;
-        border: none; }
+        border: none;
+        box-shadow: 5px 5px 10px gray; }
   main .contents {
     width: 80%;
     max-width: 1200px;
